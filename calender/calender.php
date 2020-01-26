@@ -1,11 +1,12 @@
+<!DOCTYPE html>
+
 <?php
     session_start();
     
     if (isset($_POST['month']) && isset($_POST['year'])) {
         $month = $_POST['month'];
         $year = $_POST['year'];
-        $_SESSION['month']=$_POST['month'];
-        $_SESSION['year']=$_POST['year'];    
+        echo 'calender of  '.$_SESSION['month']=$_POST['month'].'-'.$_SESSION['year']=$_POST['year'];    
 
         function showCalender( $month, $year){
             echo "<table border='1' >";
@@ -23,94 +24,75 @@
             for($d = 1; $d <= date('t',mktime(0, 0, 0, $month, 1, $year)); $d++)
             {
                 $time = mktime(12, 0, 0, $month, $d, $year);  
-                if (date('m', $time) == $month)
-                {
-                    $thismonth = date('m', $time);
-                    if (date('D', $time) == 'Sun') {
-                        echo "<tr>";
-                        echo "<td>".date(' d D ', $time)."</td>";
-                    }
-                    elseif (date('D', $time) == 'Mon' && date('d', $time)== 1) {
-                        echo "<td></td>";
-                        echo "<td>".date(' d D ', $time)."</td>";
-                    }
-                    elseif(date('D', $time) == 'Tue' && (date('d', $time) == 1)){
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td>".date(' d D ', $time)."</td>";
-                    }
-                    elseif(date('D', $time) == 'Wed' && (date('d', $time) == 1)){
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td>".date(' d D ', $time)."</td>";
-                    }
-                    elseif(date('D', $time) == 'Thu'&& (date('d', $time) == 1)){
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>x    ";
-                        echo "<td></td>";
-                        echo "<td>".date(' d D ', $time)."</td>";
-                    }
-                    elseif(date('D', $time) == 'Fri' && (date('d', $time) == 1)){
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td>".date(' d D ', $time)."</td>";
-                    }
-                    elseif(date('D', $time) == 'Sat' && (date('d', $time) == 1)){
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td></td>";
-                        echo "<td>".date(' d D ', $time)."</td>";
+
+                if ($d == 1) {
+                	echo 'weekday : '.$weekday = date('w', $time);
+                	$flag=false;
+                		
+                }
+                 
+                if ($flag == false && $d == 1) {
+                	if ($d % 7 == 0) {
+	                    echo "<tr>";
+	                    echo "<td>".date(' d D ', $time)."</td>";
                     }
                     else{
+                    	for ($i=0; $i < $weekday; $i++) { 
+                    		echo "<td></td>";
+                    	}
                         echo "<td>".date(' d D ', $time)."</td>";
+                        $flag = true;
                     }
+                
                 }
+
+                else{
+                	if (date('D', $time) == 'Sun') {
+	                    echo "<tr>";
+	                    echo "<td>".date(' d D ', $time)."</td>";
+                    }
+                    else{
+                    	echo "<td>".date(' d D ', $time)."</td>";
+                    }
+                
+                }
+                    
             }
             
             echo "</tr></table>";
         
         }
-        showCalender( $month, $year);
-        
+        showCalender($month, $year);
+      
     }
     else{
-        echo 'in session';
-
-        echo $_SESSION['month'];
-        echo $_SESSION['year'];
+        echo $_SESSION['month'].'-'.$_SESSION['year'];
     }
 ?>
-    <br>
-    <br>
-    <hr><br>
-    <br><br>
-    <br>
-    <form method="POST" action="calender.php">
-       <!-- Year : <input type="no" name="year"><br><br> -->
-        Month : <select name="month">
-            <option>Select Month</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-        </select><br><br>
-        Year : <input type="no" name="year"><br><br>
-        
-        <input type="submit" name="submit" value="show calender">   
-    </form>
+
+    <hr>
+    <html>
+        <body>
+            <form method="POST" action="calender.php">
+            <!-- Year : <input type="no" name="year"><br><br> -->
+                Month : <select name="month">
+                    <option>Select Month</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select><br><br>
+                Year : <input type="no" name="year"><br><br>
+                
+                <input type="submit" name="submit" value="show calender">   
+            </form>
+        </body>
+    </html>
