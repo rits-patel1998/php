@@ -101,7 +101,7 @@ if (isset($_POST['logout'])) {
 if (isset($_POST['myProfile'])) {
     // print_r($_POST);
     echo "Profile clicked";
-    header('location: registration.php');
+    header('location: updateForm.php');
     
 }
 ?>

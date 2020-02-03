@@ -82,7 +82,7 @@
         // print_r($userCleanArray);
         if (insertValues(array_keys($postData)[0], $userCleanArray)) {
            echo "Record Inserted";
-           header('Location: showBlogPost.php');
+           header('Location: blogPostForm.php');
         }
     }
    

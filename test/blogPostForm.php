@@ -1,6 +1,7 @@
 <?php
     require_once "showBlogPost.php";
-
+    session_start();
+    echo $_SESSION["logUser"];
     
 
 ?>

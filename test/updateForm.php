@@ -1,6 +1,6 @@
 <?php
 
-    require_once "register.php";
+    require_once "update.php";
 ?>
 
 <html>
@@ -83,7 +83,7 @@
             </div>
 
             <br><br>
-            <input type="submit" name="register" value="Register">
+            <input type="submit" name="update" value="Register">
                         
         </form>
        
