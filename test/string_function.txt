@@ -1,0 +1,9 @@
+strpos = strpos() function will return the position  
+         character to be searched from the specified string
+
+$str = "My self something";
+$position = strpos('se',$str);
+echo "$position";
+
+
+// will return position 3
