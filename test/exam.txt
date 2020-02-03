@@ -1,0 +1,10 @@
+definition : array_combine() method is used to combine two array1
+             and will return the combined array
+
+           = it will append second array in first array and return
+
+$array1 = [1,5,6];
+$array1 = [1,2,3];
+
+array_combine($array1,$array2);
+print_r($array1);
