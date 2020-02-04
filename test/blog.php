@@ -22,12 +22,13 @@ function setSessionValues($section){
 function getBlogCleanArray($blogData){
     $blogArr = array( 
         "title" => $blogData['title'],
+        "category_name" => $blogData['category_name'],
         "url" => $blogData['url'],
         "content" => $blogData['content'],
         "image" => "",
         "published_at" => $blogData['published_at'],
-        "created_at" => $blogData['created_at'],
-        "user_id" => $blogData['user_id']
+        "created_at" => date('Y-m-d H:i:s'),
+        "user_id" => $_SESSION["logUserId"]
     );
     return $blogArr;
    
@@ -78,6 +79,16 @@ function insertValues($table,$postValues){
         return false;
     }
    
+}
+
+function getSelectArray($row){
+    $arr = [];
+    print_r($row);
+    for ($i = 0; $i < sizeof($row) ; $i++) { 
+        array_push($arr, $row[$i]);
+
+    }
+    return $arr;
 }
 
 if (isset($_POST['addNewBlog'])) {

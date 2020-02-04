@@ -22,14 +22,14 @@
         if ($rowcount == 1) {
             $_SESSION["logUser"] = $row[1];
             $_SESSION["logUserId"] = $row[0];
-            echo $_SESSION['logUser'];
+            echo $_SESSION['logUserId'];
             echo "<script>alert('Login Successfull');</script>";
-            header('Location: blogPostForm.php');
+            header('Location: showBlogPost.php');
         }
         else{
             echo "Invalid login details";
         }
-
+        
       
     }
 

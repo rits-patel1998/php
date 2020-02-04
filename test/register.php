@@ -1,5 +1,6 @@
 <?php
     require_once "connection.php";
+
     function getValue($section,$fieldname ,$return_type = ""){
         
         return (isset($_POST[$section][$fieldname]) 
@@ -63,6 +64,18 @@
         return $userArr;
        
     }
+    function getCategoryCleanArray($CategoryData){
+        $categoryArr = array( 
+            "title" => $CategoryData['title'],
+            "url" => $CategoryData['url'],
+            "content" => $CategoryData['content'],
+            "image" => "",
+            "created_at" => date('Y-m-d H:i:s'),
+            "parent_id" => $CategoryData['parent'],
+        );
+        return $categoryArr;
+       
+    }
     function getBlogCleanArray($blogData){
         $blogArr = array( 
             "title" => $blogData['prefix'],
@@ -82,10 +95,30 @@
         // print_r($userCleanArray);
         if (insertValues(array_keys($postData)[0], $userCleanArray)) {
            echo "Record Inserted";
-           header('Location: blogPostForm.php');
+           header('Location: login_form.php');
         }
     }
-   
+
+    function getCategoryArray($postData){
+        $categoryCleanArray = getCategoryCleanArray($postData['category']);
+        // print_r($userCleanArray);
+        if (insertValues(array_keys($postData)[0], $categoryCleanArray)) {
+           echo "Record Inserted";
+           // header('Location: login_form.php');
+        }
+    }
+    
+    
+    function getSelectArray($row){
+        $arr = [];
+        print_r($row);
+        for ($i = 0; $i < sizeof($row) ; $i++) { 
+            array_push($arr, $row[$i]);
+
+        }
+        return $arr;
+    }
+
     
     
     
@@ -95,10 +128,13 @@
     }
 
     if (isset($_POST['addNewBlog'])) {
-        getBlogArray($_POST);
+        getArray($_POST);
         setSessionValues('blog');
     }
 
-    
+    if (isset($_POST['addCategory'])) {
+        getCategoryArray($_POST);
+        setSessionValues('category'); 
+    }    
 
 ?>

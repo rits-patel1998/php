@@ -1,14 +1,14 @@
 function validateFname(fname) {
-    var letters = /^[a-zA-Z]+$/;
-    if (fname === "" && !fname.match(letters)) {
+    var letters = /[a-zA-Z]/;
+    if (fname === "" && (!fname.match(letters))) {
         alert('enter valid name');
     }
     
 }  
 
-function validatelname(lname) {
+function validateLname(lname) {
     var letters = /^[a-zA-Z]+$/;
-    if (lname === "" && !fname.match(letters)) {
+    if (lname === "" && (!lname.match(letters))) {
         alert('enter valid last name');
     }
     

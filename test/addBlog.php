@@ -2,6 +2,7 @@
 
     require_once "connection.php";
     require_once "blog.php";
+
 ?>
 
 <html>
@@ -19,10 +20,33 @@
                 <div>
                     <label>title: </label>
                     <input type="text" name="blog[title]" value="<?php 
-                        echo getValue('user','title'); ?>" onblur="validateFname(this.value);">
+                        echo getValue('user','title'); ?>" >
                     <label style="color: red;" name="titleError" ><br><br>
                                 
                 </div>
+                 <div>
+                    <label>Select Category : </label>
+                    <select name="blog[category_name]">
+                            <?php
+                                $obj = new Connection();
+                                $con = $obj ->dbConnect();
+                                $selectUser = "select title from category ";
+                                $result = mysqli_query($con,$selectUser);
+                                while ($row = mysqli_fetch_row($result)) {
+                                   
+                                    $rowArr = getSelectArray($row); ?>
+                                    <?php foreach ($rowArr as $value) :?>
+                                        <?php $selected = in_array(getValue('blog','category_name'),[$value]) ? "selected" : ''; ?>
+                                        <option value="<?php echo $value;?>" <?php echo $selected; ?>><?php echo $value; ?></option><?php
+                                    endforeach;
+                                }
+                            ?>
+                           
+                        </select>
+
+                    <br><br>
+                </div>     
+       
                 <div>
                     <label>url : </label>
                     <input type="text" name="blog[url]"  value="<?php 
@@ -49,30 +73,8 @@
                     <label style="color: red;" name="published_atError" ><br><br>
                 </div>
 
-                <div>
-                    <label>created at : </label>
-                    <input type="date"  name="blog[created_at]" value="<?php 
-                        echo getValue('blog','created_at');?>" >
-                    <label style="color: red;" name="created_atError" ><br><br>
-                </div> 
-                <div>
-                    <label>Select User : </label>
-                    <select name="blog[user_id]">
-                            <?php
-                                $obj = new Connection();
-                                $con = $obj ->dbConnect();
-                                $selectUser = "select user_id from user ";
-                                $result = mysqli_query($con,$selectUser);
-                                while ($row = mysqli_fetch_row($result)) {
-                                    ?><option value="<?php echo $row[0];?>"><?php echo $row[0]; ?></option><?php
-                                }
-                            ?>
-                           
-                        </select>
-
-                    <br><br>
-                </div>     
-            </div>
+                
+                    </div>
 
             <br><br>
             <input type="submit" name="addNewBlog" value="Add New Blog">

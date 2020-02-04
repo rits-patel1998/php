@@ -34,13 +34,13 @@
                 <div>
                     <label>Last name : </label>
                     <input type="text" name="user[lastname]"  value="<?php 
-                        echo getValue('user','lastname'); ?>" onblur="validatelname(this.value)>
+                        echo getValue('user','lastname'); ?>"  onblur="validateLname(this.value);">
                     <label style="color: red;" name="lastnameError" ><br><br>
                                     
                 </div>
                 <div>
                     <label>Email : </label>
-                    <input type="text"  name="user[email]" value="<?php                         echo getValue('user','email');?>" >
+                    <input type="text"  name="user[email]" value="<?php echo getValue('user','email');?>" >
                     <label style="color: red;" name="emailError" ><br><br>
                 </div>
 
