@@ -2,13 +2,12 @@
 
     require_once "connection.php";
     require_once "blog.php";
-
 ?>
 
 <html>
     <body>
 
-    <form method="POST" action="">
+    <form method="POST" action="" enctype="multipart/form-data" >
         <script src="validate.js"></script>
             <div>
                 <h2>Add Blog Page</h2>
@@ -26,18 +25,18 @@
                 </div>
                  <div>
                     <label>Select Category : </label>
-                    <select name="blog[category_name]">
+                    <select name="blog[category_name][]" multiple>
                             <?php
                                 $obj = new Connection();
                                 $con = $obj ->dbConnect();
-                                $selectUser = "select title from category ";
+                                $selectUser = "select category_id,title from category ";
                                 $result = mysqli_query($con,$selectUser);
                                 while ($row = mysqli_fetch_row($result)) {
                                    
                                     $rowArr = getSelectArray($row); ?>
                                     <?php foreach ($rowArr as $value) :?>
-                                        <?php $selected = in_array(getValue('blog','category_name'),[$value]) ? "selected" : ''; ?>
-                                        <option value="<?php echo $value;?>" <?php echo $selected; ?>><?php echo $value; ?></option><?php
+                                        <?php $selected = array_intersect(getValue('blog','category_name',[]),[$value]) ? "selected" : ''; ?>
+                                        <option value="<?php echo $row[0];?>" <?php echo $selected; ?>><?php echo $row[1]; ?></option><?php
                                     endforeach;
                                 }
                             ?>
@@ -63,7 +62,7 @@
 
                 <div>
                     <label>Image: </label>
-                    <input type="file"  name="file" >
+                    <input type="file" name="file" >
                 </div>
 
                 <div>

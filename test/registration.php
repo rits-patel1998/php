@@ -6,9 +6,8 @@
 <html>
 
     <body>
-        <form method="POST" action="">
-        <script src="validate.js"></script>
-            <div>
+        <form method="POST" id=formData action="" onsubmit="validateFields()">
+           <div>
                 <h2>REGISTRATION PAGE</h2>
             </div>
             <div id="user" >
@@ -26,21 +25,22 @@
                                     
                 <div>
                     <label>First name : </label>
-                    <input type="text" name="user[firstname]" value="<?php 
-                        echo getValue('user','firstname'); ?>" onblur="validateFname(this.value);">
+                    <input type="text"  id="firstname" name="user[firstname]" value="<?php 
+                        echo getValue('user','firstname'); ?>"">
                     <label style="color: red;" name="firstnameError" ><br><br>
                                 
                 </div>
                 <div>
                     <label>Last name : </label>
                     <input type="text" name="user[lastname]"  value="<?php 
-                        echo getValue('user','lastname'); ?>"  onblur="validateLname(this.value);">
+                        echo getValue('user','lastname'); ?>" >
                     <label style="color: red;" name="lastnameError" ><br><br>
                                     
                 </div>
                 <div>
                     <label>Email : </label>
-                    <input type="text"  name="user[email]" value="<?php echo getValue('user','email');?>" >
+                    <input type="text"  name="user[email]" value="<?php 
+                        echo getValue('user','email');?>" >
                     <label style="color: red;" name="emailError" ><br><br>
                 </div>
 
@@ -86,6 +86,7 @@
             <input type="submit" name="register" value="Register">
                         
         </form>
-       
+        <script src="validate.js"></script>
+        
     </body>
 </html>

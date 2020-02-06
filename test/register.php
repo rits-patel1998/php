@@ -10,8 +10,7 @@
 
         
     }
-
-
+    
     function setSessionValues($section){
         return (isset($_POST[$section]) ? $_SESSION[$section] = $_POST[$section] : [] );
     }
@@ -64,13 +63,14 @@
         return $userArr;
        
     }
-    function getCategoryCleanArray($CategoryData){
+    function getCategoryCleanArray($CategoryData,$file_location){
         $categoryArr = array( 
             "title" => $CategoryData['title'],
             "url" => $CategoryData['url'],
             "content" => $CategoryData['content'],
-            "image" => "",
+            "image" => $file_location,
             "created_at" => date('Y-m-d H:i:s'),
+            "updated_at" => "",
             "parent_id" => $CategoryData['parent'],
         );
         return $categoryArr;
@@ -99,12 +99,12 @@
         }
     }
 
-    function getCategoryArray($postData){
-        $categoryCleanArray = getCategoryCleanArray($postData['category']);
-        // print_r($userCleanArray);
+    function getCategoryArray($postData,$file_location=""){
+        $categoryCleanArray = getCategoryCleanArray($postData['category'],$file_location);
+        // print_r($categoryCleanArray);
         if (insertValues(array_keys($postData)[0], $categoryCleanArray)) {
-           echo "Record Inserted";
-           // header('Location: login_form.php');
+           // echo "<script>alert ('Record Inserted');</script>";
+           header('Location: showCategory.php');
         }
     }
     
@@ -124,6 +124,7 @@
     
     if (isset($_POST['register'])) {
         getArray($_POST);
+
         setSessionValues('user');
     }
 
@@ -133,7 +134,27 @@
     }
 
     if (isset($_POST['addCategory'])) {
-        getCategoryArray($_POST);
+        // getCategoryArray($_POST);
+
+        if (isset($_FILES['file'])) {
+            $filename = $_FILES['file']['name'];
+            $tmp_name = $_FILES['file']['tmp_name'];
+            
+            $location = 'file/category/';
+            if ( move_uploaded_file($tmp_name, $location .$filename)) {
+                echo "uploaded";
+                echo $file_location = $location .$filename; 
+                
+                getCategoryArray($_POST,$file_location); 
+            }
+            else {
+                echo "Something went wrong";
+            }
+               
+        }
+        else{
+            echo "choose file first";
+        }
         setSessionValues('category'); 
     }    
 

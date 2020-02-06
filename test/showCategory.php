@@ -9,12 +9,12 @@
         
         $_SESSION['category_id'] = $_GET['category_id'];
         $category_id =  $_SESSION['category_id'];
-        // deleteCategory($category_id);
+        deleteCategory($category_id);
     }
 	
     if (isset($_POST['addCategory'])) {
         
-       header('location: addCategoryForm.php');
+        header('location: addCategoryForm.php');
        
     }    
 

@@ -48,7 +48,7 @@
                 <div>
                     <label>Phone No : </label>
                     <input type="text"  name="user[phoneno]" value="<?php 
-                        echo getValue('user','email');?>" >
+                        echo getValue('user','phoneno');?>" >
                     <label style="color: red;" name="phonenoError" ><br><br>
                 </div>
                 <div>

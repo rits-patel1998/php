@@ -67,7 +67,6 @@ if (isset($_POST['update'])) {
     }
 
     $userPreparedArray = prepareArr($userCleanArray);
-    
     update($userPreparedArray); 
     
     
@@ -175,13 +174,12 @@ function getBlogValue($section,$fieldname ,$return_type = ""){
         
 }
 
-function getBlogCleanArray($blogData){
+function getBlogCleanArray($blogData,$file_location){
     $blogArr = array( 
-        "category_name" => $blogData['category'],
-        "title" => $blogData['title'],
+       "title" => $blogData['title'],
         "url" => $blogData['url'],
         "content" => $blogData['content'],
-        "image" => "",
+        "image" => $file_location,
         "updated_at" => date('Y-m-d H:i:s'),
     );
     return $blogArr;
@@ -208,27 +206,47 @@ function updateBlog($arrBlog){
         }
     return true;
 }
+
+
+function prepareArr($array){
+    $arrUser = [];
+    $arrUserimploded = [];
+    foreach ($array as $key => $value) {
+        $strValues = "$key = '$value'";
+        array_push( $arrUser,  $strValues );
+    }
+                
+    array_push($arrUserimploded, implode(',',$arrUser));
+    return $arrUserimploded;
+}
+
+
+
 if (isset($_POST['updateBlog'])) {
     
-    $blogCleanArray = getBlogCleanArray($_POST['blog']);
-   
-    // print_r($otherCleanArray);
-    
-    function prepareArr($array){
-        $arrUser = [];
-        $arrUserimploded = [];
-        foreach ($array as $key => $value) {
-            $strValues = "$key = '$value'";
-            array_push( $arrUser,  $strValues );
-        }
+    if (isset($_FILES['file'])) {
+        $filename = $_FILES['file']['name'];
+        $tmp_name = $_FILES['file']['tmp_name'];
+        $location = 'file/';
         
-        array_push($arrUserimploded, implode(',',$arrUser));
-        return $arrUserimploded;
-    }
+        if ( move_uploaded_file($tmp_name, $location .$filename)) {
+            echo "uploaded";
+            echo $file_location = $location .$filename; 
+            $blogCleanArray = getBlogCleanArray($_POST['blog'],$file_location);
+            
 
-    $blogPreparedArray = prepareArr($blogCleanArray);
-    // print_r($blogPreparedArray);
-    updateBlog($blogPreparedArray); 
+            $blogPreparedArray = prepareArr($blogCleanArray);
+            print_r($blogPreparedArray);
+            updateBlog($blogPreparedArray); 
+              
+         }
+        else {
+            echo "Something went wrong";
+        }
+    }
+    else{
+        echo "choose file first";
+    }
     
     
 }

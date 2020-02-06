@@ -17,7 +17,7 @@
         }
     }
 
-    $select = "select blog_post_id,category_name,title,published_at,user_id
+    $select = "select blog_post_id,title,published_at,user_id
                 FROM blog_post WHERE user_id = $user_id";
 
     echo $select;
@@ -28,9 +28,9 @@
     ?><tr>
     
         <th>Blog Post Id</th>
-        <th>Category</th>
         <th>title</th>
         <th>Published at</th>
+        <!-- <th>Us</th> -->
         
         <th colspan = '2'>Actions</th>
         
@@ -45,7 +45,10 @@
 
         echo $row[0];
         echo "<tr>";?>
-            <td> <?php echo $row[0] ?></td> <td><?php echo $row[1] ?> </td><td><?php echo $row[2] ?> </td><td><?php echo $row[3] ?> </td>
+            <td> <?php echo $row[0] ?></td> 
+            <td><?php echo $row[1] ?> </td>
+            <td><?php echo $row[2] ?> </td>
+            <!-- <td><?php// echo $row[3] ?> </td> -->
             <td><a href = 'showBlogPost.php?blog_id=<?php echo $row[0]; ?>'>delete</a></td>
             <td><a href = 'updateBlog.php?blog_id= <?php echo $row[0]; ?>'>Update</a></td>
             
