@@ -3,19 +3,19 @@
 	// require "../App/Controllers/Posts.php";
 	// require "../Core/Router.php";
 	
-
+	// use Core\Router;
 	// Twig_Autoloader::register();
 
-	require_once dirname(__DIR__).'/vender/autoload.php';
-	
+	// require_once dirname(__DIR__).'/vendor/autoload.php';
+	require "../vendor/autoload.php";	
 
-	spl_autoload_register(function ($className){
-		$rootDir = dirname(__DIR__);
-		$file = $rootDir ."/".str_replace('\\','/', $className).'.php';
-		if (is_readable($file)) {
-			require $rootDir.'/'.str_replace('\\', '/', $className).'.php';
-		}
-	});
+	// spl_autoload_register(function ($className){
+	// 	$rootDir = dirname(__DIR__);
+	// 	$file = $rootDir ."/".str_replace('\\','/', $className).'.php';
+	// 	if (is_readable($file)) {
+	// 		require $rootDir.'/'.str_replace('\\', '/', $className).'.php';
+	// 	}
+	// });
 
 	$router = new Core\Router();
 	// $postObj = new App\Controllers\Posts();

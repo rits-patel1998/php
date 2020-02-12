@@ -26,7 +26,8 @@
 			View::renderTemplate('Home/index.html',[
 
 				'name' => 'Ritu',
-				'colors' => ['red','Green','Blue']
+				'colors' => ['red','Green','Blue'],
+				'base_url'=>dirname($_SERVER['SCRIPT_NAME'])
 
 			]);
 		}

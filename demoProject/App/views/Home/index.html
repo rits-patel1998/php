@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-	<h3>index in home</h3>
+{% extends "base.html" %}
 
+{% block title %}Home{% endblock %}
+
+{% block body %}
+	<h3>index in home</h3>
+	<hr>
 	<h3>Hello,====Twig  {{ name }}</h3>
 	<ul>
 
@@ -15,5 +14,4 @@
 			<li>{{ clr }}</li>
 		{% endfor %}
 	</ul>
-</body>
-</html>
+{% endblock %}
