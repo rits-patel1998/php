@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %} Add Catgory{% endblock %}
+{% block body %}
+	<h2>Show Product</h2>
+
+	<form action="" method="Post" enctype="multipart/form-data">
+		
+		<!-- <table>
+			<tr>
+				<td></td>
+			</tr>
+		</table> -->
+		{% for data in showData %}
+		<table border="2">
+			<tr>
+				<td>Product name : </td>
+				<td><input type="text" name="product_name" value="{{data.product_name}}"></td>
+			</tr>
+			<tr>
+				<td>Stock per Unit : </td>
+				<td><input type="text" name="sku" value="{{data.SKU}}"></td>
+			</tr>
+			<tr>
+				<td>Url Key : </td>
+				<td><input type="text" name="url_key" value="{{data.url_key}}"></td>
+			</tr>
+			<tr>
+				<td>Product Image : </td>
+				<td><input type="file" name="file"></td>
+			</tr>
+
+			<tr>
+				<td>Status : </td>
+				<td>
+					<select name="status" value="{{data.status}}" >
+						<option value="1" {% if data.status == 1 %}
+							selected
+							{% endif %}
+						 >Available</option>
+						<option value="0" {% if data.status == 0 %}
+							selected
+							{% endif %}>Unvailable</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Description: : </td>
+				<td><textarea name="description" rows="5" cols="20" >{{data.description}}</textarea></td>
+			</tr>
+			<tr>
+				<td>Short Description: </td>
+				<td><input type="text" name="short_description" value="{{data.short_description}}"></td>
+			</tr>
+			<tr>
+				<td>Price : </td>
+				<td><input type="text" name="price" value="{{data.price}}"></td>
+			</tr>
+			<tr>
+				<td>Stock : </td>
+				<td><input type="text" name="stock" value="{{data.stock}}"></td>
+			</tr>
+			<tr>
+				<td>Category id : </td>
+				<td>
+					<select name="category_id[]" multiple="">
+						<option placeholder="select Catgory" disabled="">Select category</option>
+						{% for cat in categoryData %}
+						<option value="{{ cat.category_id }}">{{ cat.category_name }}</option>
+						{% endfor %}
+					</select>
+
+				</td>
+			</tr>
+			
+			<tr>
+				<td><input type="Submit" name="updateProduct" value="Update Product"></td>
+			</tr>
+		</table>
+		{% endfor %}
+		
+	</form>
+	
+{% endblock %}

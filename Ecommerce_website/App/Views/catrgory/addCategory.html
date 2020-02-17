@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %} Add Catgory{% endblock %}
+{% block body %}
+	<h2>Show Category</h2>
+
+	<form action="addCategory" method="Post" enctype="multipart/form-data">
+		
+		<!-- <table>
+			<tr>
+				<td></td>
+			</tr>
+		</table> -->
+		<table border="2">
+			<tr>
+				<td>Category name : </td>
+				<td><input type="text" name="category_name"></td>
+			</tr>
+			<tr>
+				<td>Url Key : </td>
+				<td><input type="text" name="url_key"></td>
+			</tr>
+			<tr>
+				<td>Image : </td>
+				<td><input type="file" name="file"></td>
+			</tr>
+			<tr>
+				<td>Status : </td>
+				<td>
+					<select name="status">
+						<option value="null" >Select status</option>
+						<option value="1">Available</option>
+						<option value="0">Unvailable</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Description: : </td>
+				<td><input type="text" name="description"></td>
+			</tr>
+			<tr>
+				<td>Parent Category : </td>
+				<td>
+					<select name="parent_category">
+						<option value="null" >Select category</option>
+						{% for cat in categoryData %}
+						<option value="{{ cat.category_id }}">{{ cat.category_name }}</option>
+						{% endfor %}
+					</select>
+
+				</td>
+			</tr>
+			
+			<tr>
+				<td><input type="Submit" name="addCategory"></td>
+			</tr>
+		</table>
+	</form>
+	
+{% endblock %}

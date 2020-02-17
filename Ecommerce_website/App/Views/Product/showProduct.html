@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %} Show Catgory{% endblock %}
+{% block body %}
+	<h2>Show Product</h2>
+
+	<a href="addProduct">Add Product</a>
+
+	<table border="2">
+		<tr>
+			<th>Product Name</th>
+			<th>SKU</th>
+			<th>Url Key</th>
+			<th>Product Image</th>
+			<th>Description</th>
+			<th>Short Description</th>
+			<th>Price</th>
+			<th>Stock</th>
+			<th>Parent Category</th>
+			
+			<th colspan="2">Actions</th>
+		</tr>
+		
+		{% for product in showData %}
+		<tr>
+			<td>{{ product.product_name }}</td>
+			<td>{{ product.SKU }}</td>
+			
+			
+			<td>{{ product.url_key }}</td>
+			<td><img src="\cybercom\Ecommerce_website\Resources/{{ product.image }}" style="height=50px; width: 50px;"></td>
+			<td>{{ product.description }}</td>
+			
+			<td>{{ product.short_description }}</td>
+			<td>{{ product.price }}</td>
+			<td>{{ product.stock }}</td>
+			<td>{{ product.category_name }}</td>
+			
+			<td><a href="edit/{{product.product_id}}">Edit</a></td>
+			<td><a href="delete/{{product.product_id}}">Delete</a></td>
+		</tr>
+
+		{% endfor %}
+	</table>
+{% endblock %}

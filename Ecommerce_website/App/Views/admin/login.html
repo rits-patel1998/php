@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Login Form{% endblock %}
+
+{% block body %}
+
+	<form action="dashboard" method='POST'>
+		<h2>Login Page</h2>
+		<table>
+			<tr>
+				<td>Email : </td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td>Password : </td>
+				<td><input type="text" name="password"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="userLogin" value="Login"></td>
+			</tr>
+		</table>
+	</form>
+
+{% endblock %} 
