@@ -20,9 +20,16 @@ require "../vendor/autoload.php";
 	// echo $_SERVER['QUERY_STRING'];
 	// $router->add('admin/{controller}');
 	// $router->add('',['controller' => 'Admin','action' => 'login']);
+	$router->add('admin/cms/{controller}', ['namespace'=>'admin\cms','action'=>'index']);
+	$router->add('admin/cms/{controller}/{action}',['namespace'=>'admin\cms']);
+	$router->add('admin/cms/{controller}/{action}/{id:\d+}',['namespace'=>'admin\cms']);
+	
+	$router->add('admin/cms/{controller}/{action}/id/{id:\d+}',['namespace'=>'admin\cms']);
+	
 	$router->add('{controller}/{action}');
 	$router->add('{controller}/{id:\d+}/{action}');
 	$router->add('admin/{controller}/{action}',['namespace'=>'Admin']);
+	
 	$router->add('admin/{controller}/{action}/{id:\d+}',['namespace'=>'Admin']);
 	
 

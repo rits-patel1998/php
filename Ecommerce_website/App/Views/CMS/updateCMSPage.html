@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %} Add Catgory{% endblock %}
+{% block body %}
+	<h2>Add Pages</h2>
+
+	<form action="" method="Post">
+		
+		
+		{% for page in showData %}
+		<table border="2">
+			<tr>
+				<td>Page titile : </td>
+				<td><input type="text" value="{{page.cms_page_title}}" name="page_title"></td>
+			</tr>
+			<tr>
+				<td>Url Key : </td>
+				<td><input type="text" value="{{page.url_key}}" name="url_key"></td>
+			</tr>
+			<tr>
+				<td>Status : </td>
+				<td>
+					<select name="status">
+						<option value="null" >Select status</option>
+						<option value="1" value="1" {% if data.status == 1 %}
+							selected
+							{% endif %}>Available</option>
+						<option value="0" {% if data.status == 0 %}
+							selected
+							{% endif %}>Unvailable</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Content : </td>
+				<td><textarea name="content" rows="5" cols="25">{{page.content}}</textarea></td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td><input type="Submit" name="updatePages"></td>
+			</tr>
+		</table>
+		{% endfor %}
+	</form>
+	
+{% endblock %}

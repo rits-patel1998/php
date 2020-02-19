@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %} Add Catgory{% endblock %}
+{% block body %}
+	<h2>Add Pages</h2>
+
+	<form action="" method="Post">
+		
+		
+		<table border="2">
+			<tr>
+				<td>Page titile : </td>
+				<td><input type="text" name="page_title"></td>
+			</tr>
+			<tr>
+				<td>Url Key : </td>
+				<td><input type="text" name="url_key"></td>
+			</tr>
+			<tr>
+				<td>Status : </td>
+				<td>
+					<select name="status">
+						<option value="null" >Select status</option>
+						<option value="1">Available</option>
+						<option value="0">Unvailable</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Content : </td>
+				<td><textarea name="content" rows="5" cols="25"></textarea></td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td><input type="Submit" name="addPages"></td>
+			</tr>
+		</table>
+	</form>
+	
+{% endblock %}

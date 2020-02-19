@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} Show Catgory{% endblock %}
+{% block body %}
+	<h2>Show Page List</h2>
+
+	<a href="Pages/add">Add CMS Pages</a>
+	<!-- {{ url }} -->
+	<table border="2">
+		<tr>
+			<th>Page Title</th>
+			<th>Url Key</th>
+			<th>Status</th>
+			<th>Content</th>
+			
+			
+			<th colspan="2">Actions</th>
+		</tr>
+		
+		{% for page in showdata %}
+		<tr>
+			<td>{{ page.cms_page_title }}</td>
+			<td>{{ page.url_key }}</td>
+			<td>{{ page.status }}</td>
+			<td>{{ page.content }}</td>
+			
+			
+			<td><a href="{{url}}/public/admin/cms/Pages/edit/{{page.cms_id}}">Edit</a></td>
+			<td><a href="{{url}}/public/admin/cms/Pages/delete/{{page.cms_id}}">Delete</a></td>
+		</tr>
+
+		{% endfor %}
+	</table>
+{% endblock %}
