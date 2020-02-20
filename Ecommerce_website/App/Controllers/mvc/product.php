@@ -10,8 +10,9 @@ use PDO;
 class product extends \Core\Controller{
 
 	public function view(){
-		echo $url_key = $this->route_params['parameter'];
+		$url_key = $this->route_params['parameter'];
 		$products = $this->getSingleProduct($url_key);
+		$cmsPages = $this->getCMSPages();
 		// echo "<pre>";
   //     	print_r($products);
   //     	echo "</pre>";
@@ -22,11 +23,25 @@ class product extends \Core\Controller{
 			
 			'products' => $products,
 			'base_url' => $_SESSION['base_url'],
-			'arrParent' => $arrParent
-
+			'arrParent' => $arrParent,
+			'cmsPages' => $cmsPages
 		]);	
 	}
 
+	protected function getCMSPages(){
+			$db = model::getDB();
+				// echo "6666666666666666";
+				
+			$selectcmsData = "SELECT * from cms_pages";
+			$stmt = $db->query($selectcmsData);
+
+			$cmsData = $stmt->fetchAll(PDO::FETCH_ASSOC);	
+			// echo"<pre>";
+			// print_r($cmsData);
+			// echo"</pre>";
+			// die();
+			return $cmsData;
+		}
 
 	protected function getSingleProduct($url_key){
 		$db = model::getDB();

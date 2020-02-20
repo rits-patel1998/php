@@ -9,18 +9,38 @@
 	
 	class Home extends \Core\Controller{
 		// public function __
+
+		public function login(){
+			View::renderTemplate('Home/login.html');
+		}
 		public function index(){
 			$arrParent = $this->getCategories();
+			$cmsPages = $this->getCMSPages();
 			// echo"<pre>";
 			// print_r($arrParent);
 			// echo"</pre>";
 			View::renderTemplate('Home/home.html',[
 
 				'arrParent' => $arrParent,
-				'base_url' => $_SESSION['base_url']
+				'base_url' => $_SESSION['base_url'],
+				'cmsPages' => $cmsPages
 			]);
 		}
 
+		protected function getCMSPages(){
+			$db = model::getDB();
+				// echo "6666666666666666";
+				
+			$selectcmsData = "SELECT * from cms_pages";
+			$stmt = $db->query($selectcmsData);
+
+			$cmsData = $stmt->fetchAll(PDO::FETCH_ASSOC);	
+			// echo"<pre>";
+			// print_r($cmsData);
+			// echo"</pre>";
+			// die();
+			return $cmsData;
+		}
 
 		protected function getCategories(){
 			$db = model::getDB();
@@ -44,6 +64,35 @@
 			return $arrParent;
 
 		}
+
+		protected function getSingleCMSPages($url_key){
+			$db = model::getDB();
+				// echo "6666666666666666";
+				
+			$selectcmsData = "SELECT * from cms_pages where url_key = '$url_key'";
+			
+			$stmt = $db->query($selectcmsData);
+
+			$cmsData = $stmt->fetchAll(PDO::FETCH_ASSOC);	
+			// echo"<pre>";
+			// print_r($cmsData);
+			// echo"</pre>";
+			// die();
+			return $cmsData;
+		}
+		public function cms(){
+			$arrParent = $this->getCategories();
+			$url_key = $this->route_params['parameter'];
+			// die();
+			$pageData = $this->getSingleCMSPages($url_key);
+
+			View::renderTemplate('Home/cmsPage.html',[
+
+				'arrParent' => $arrParent,
+				'base_url' => $_SESSION['base_url'],
+				'cmsPages' => $pageData
+			]);
+		}
 	}
 
-?>
+?>	
