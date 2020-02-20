@@ -26,6 +26,25 @@ class Categories extends \Core\Model{
 		return $result;
 	}
 
+
+    public function getProducts($url_key){
+        echo $url_key;
+
+        $db = static::getDB();
+        $stmt = $db->query("SELECT 
+                            p.*
+                            from product p 
+                            LEFT JOIN product_category pc
+                                ON pc.product_id = p.product_id
+                            LEFT JOIN category c
+                                ON pc.category_id = c.category_id
+                            WHERE c.url_key = '$url_key'
+                                GROUP by p.product_name");
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      
+        return $result;
+    }
+
 	public static function insert($table,$postValues){
         $fieldname = [];
         $value = [];

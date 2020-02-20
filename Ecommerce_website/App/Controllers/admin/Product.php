@@ -51,6 +51,7 @@ class Product extends \Core\Controller{
         		];
            		products::insert('product_category',$prod_cat);
            	}
+           	 $this->showProduct();
         }
         else{
         	echo "Error in insert";

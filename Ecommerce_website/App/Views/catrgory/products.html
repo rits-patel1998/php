@@ -1,0 +1,25 @@
+
+{% extends "frontBase.html" %}
+
+{% block body %}
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <a href="{{ base_url }}/public/mvc/product/view/{{product.url_key}}"><img class="card-img-top" src="\cybercom\Ecommerce_website\Resources/{{ product.image }}"></a>
+                 <div class="card-block">
+                    <h5 class="text-bold">{{product.product_name}}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+           
+    </div>
+        
+</div>
+{% endblock %}
