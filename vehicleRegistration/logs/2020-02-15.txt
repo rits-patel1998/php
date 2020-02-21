@@ -1,0 +1,7 @@
+[15-Feb-2020 09:43:31 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 87
+--------------------------

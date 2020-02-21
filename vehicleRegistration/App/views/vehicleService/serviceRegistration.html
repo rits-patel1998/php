@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block body %}
+<form action="addService" method="post">
+    <h2>Service REgistration Page</h2>
+
+
+  <div >
+      <label><b>Title</b></label>
+      <input type="text" name="title" required><br><br>
+
+      <label ><b>Vehicle No</b></label>
+      <input type="text" name="vehicleNo" required><br><br>
+
+      <label><b>Licence No</b></label>
+      <input type="text" name="licenceNo" required><br><br>
+
+      <label ><b>date</b></label>
+      <input type="date" name="date" required><br><br>
+      
+      <label><b>Time Slot</b></label>
+      
+      <select name = "timeSlot">
+        
+        <option value="9-10">9-10</option>
+        <option value="10-11">10-11</option>
+        <option value="11-12">11-12</option>
+        <option value="12-01">12-01</option>
+        <option value="1-2">1-2</option>
+        <option value="2-3">2-3</option>
+      </select>
+      <br><br>
+
+      <label ><b>Vehicle Isuue</b></label>
+      <input type="text" name="vehicleIssue" required><br><br>
+      
+      <label><b>Service Center</b></label>
+      <select name = "serviceCenter">
+        
+        <option value="ahmd">Ahmd</option>
+        <option value="surat">Surat</option>
+        <option value="vadodara">Vadodara</option>
+        
+      </select>
+      <br><br>
+
+      
+      <button type="submit" name="serviceRegister" value="Service Register">Service Register</button>
+     
+  </div>
+
+
+</form>
+{% endblock %}

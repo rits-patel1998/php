@@ -1,0 +1,353 @@
+[14-Feb-2020 11:26:17 Asia/kolkata] <h1>Fatal Error</h1>
+<p>Uncaught Exception :'Exception'</p>
+<p>Message : 'No route matched'</p>
+<p>Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('posts/index11d')
+#1 {main}'</p>
+<p>Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85</p>
+--------------------------
+[14-Feb-2020 11:29:02 Asia/kolkata] <h1>Fatal Error</h1>
+<p>Uncaught Exception :'Exception'</p>
+<p>Message : 'No route matched'</p>
+<p>Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('post/index11d')
+#1 {main}'</p>
+<p>Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85</p>
+--------------------------
+[14-Feb-2020 11:51:35 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'Method sedAction not found in controllerApp\Controllers\Posts'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\Core\Router.php(68): Core\Controller->__call('sed', Array)
+#1 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('posts/sed')
+#2 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Controller.php'	 on line 21
+--------------------------
+[14-Feb-2020 11:51:37 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'Method sedAction not found in controllerApp\Controllers\Posts'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\Core\Router.php(68): Core\Controller->__call('sed', Array)
+#1 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('posts/sed')
+#2 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Controller.php'	 on line 21
+--------------------------
+[14-Feb-2020 11:51:53 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'App\Controllers\Post class not found'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('post/sed')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 79
+--------------------------
+[14-Feb-2020 11:52:33 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'App\Controllers\Post class not found'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('post/sed')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 79
+--------------------------
+[14-Feb-2020 11:52:33 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'App\Controllers\Post class not found'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('post/sed')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 79
+--------------------------
+[14-Feb-2020 11:52:34 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'App\Controllers\Post class not found'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('post/sed')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 79
+--------------------------
+[14-Feb-2020 11:53:21 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index11')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 11:53:30 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('posts/index11')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:03:21 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:03:21 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('404.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('404.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('404.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('404.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('404.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('404.html')
+#6 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#7 {main}
+  t in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:05:48 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:05:48 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts$code.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts$code.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts$code.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts$code.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts$code.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('Posts$code.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('Posts$code.html')
+#6 [internal function]: Core\Error:: in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:06:05 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:06:05 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts/404.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts/404.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts/404.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts/404.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('Posts/404.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('Posts/404.html')
+#6 [internal function]: Core\Error::excepti in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:06:36 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:06:36 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "App/views/Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('App/views/Posts...')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('App/views/Posts...')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('App/views/Posts...')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('App/views/Posts...')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('App/views/Posts...', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('App/views/Posts...')
+#6 [inter in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:07:39 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:07:39 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Looks like you try to load a template outside configured directories (../Posts/404.html). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:268
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(186): Twig\Loader\FilesystemLoader->validateName('../Posts/404.ht...')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('../Posts/404.ht...')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('../Posts/404.ht...')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('../Posts/404.ht...')
+#4 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('../Posts/404.ht...')
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): T in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 268
+[14-Feb-2020 12:07:40 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:07:40 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Looks like you try to load a template outside configured directories (../Posts/404.html). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:268
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(186): Twig\Loader\FilesystemLoader->validateName('../Posts/404.ht...')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('../Posts/404.ht...')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('../Posts/404.ht...')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('../Posts/404.ht...')
+#4 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('../Posts/404.ht...')
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): T in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 268
+[14-Feb-2020 12:07:48 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:07:48 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "App/views/Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('App/views/Posts...')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('App/views/Posts...')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('App/views/Posts...')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('App/views/Posts...')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('App/views/Posts...', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('App/views/Posts...')
+#6 [inter in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:07:49 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:07:49 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "App/views/Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('App/views/Posts...')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('App/views/Posts...')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('App/views/Posts...')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('App/views/Posts...')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('App/views/Posts...', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('App/views/Posts...')
+#6 [inter in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:07:49 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:07:49 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "App/views/Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('App/views/Posts...')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('App/views/Posts...')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('App/views/Posts...')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('App/views/Posts...')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('App/views/Posts...', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('App/views/Posts...')
+#6 [inter in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:08:45 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:08:45 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts/404.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts/404.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts/404.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts/404.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('Posts/404.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(50): Core\View::renderTemplate('Posts/404.html')
+#6 [internal function]: Core\Error::excepti in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:10:26 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:10:26 Asia/kolkata] PHP Fatal error:  Uncaught Error: Class 'View' not found in C:\xampp\htdocs\cybercom\demoProject\Core\Error.php:51
+Stack trace:
+#0 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#1 {main}
+  thrown in C:\xampp\htdocs\cybercom\demoProject\Core\Error.php on line 51
+[14-Feb-2020 12:10:36 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:10:36 Asia/kolkata] PHP Fatal error:  Uncaught Error: Class 'Coer\View' not found in C:\xampp\htdocs\cybercom\demoProject\Core\Error.php:51
+Stack trace:
+#0 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#1 {main}
+  thrown in C:\xampp\htdocs\cybercom\demoProject\Core\Error.php on line 51
+[14-Feb-2020 12:10:41 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:10:41 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts/404.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts/404.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts/404.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts/404.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('Posts/404.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(51): Core\View::renderTemplate('Posts/404.html')
+#6 [internal function]: Core\Error::excepti in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:10:46 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:10:46 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts/404.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts/404.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts/404.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts/404.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('Posts/404.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(51): Core\View::renderTemplate('Posts/404.html')
+#6 [internal function]: Core\Error::excepti in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:11:56 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:11:56 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts/404.html" (looked into: ../App/views). in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts/404.html')
+#1 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts/404.html')
+#2 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts/404.html')
+#3 C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts/404.html')
+#4 C:\xampp\htdocs\cybercom\demoProject\Core\View.php(31): Twig\Environment->render('Posts/404.html', Array)
+#5 C:\xampp\htdocs\cybercom\demoProject\Core\Error.php(51): Core\View::renderTemplate('Posts/404.html')
+#6 [internal function]: Core\Error::excepti in C:\xampp\htdocs\cybercom\demoProject\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[14-Feb-2020 12:13:24 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 12:14:42 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index22')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 13:15:51 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 14:41:37 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 85
+--------------------------
+[14-Feb-2020 14:42:21 Asia/kolkata] Fatal Error<
+Uncaught Exception :'ErrorException
+Message : 'Undefined variable: urla'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(40): Core\Error::errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\public\index.php'	 on line 40
+--------------------------
+[14-Feb-2020 14:42:21 Asia/kolkata] Fatal Error<
+Uncaught Exception :'ErrorException
+Message : 'Undefined variable: urla'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(40): Core\Error::errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\public\index.php'	 on line 40
+--------------------------
+[14-Feb-2020 18:20:48 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'index is not found in App\Controllers\Home class'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('home/index')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 75
+--------------------------

@@ -1,0 +1,21 @@
+[21-Feb-2020 05:53:13 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 87
+--------------------------
+[21-Feb-2020 06:02:36 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'App\Controllers\Blog class not found'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('blog/product')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 81
+--------------------------
+[21-Feb-2020 06:02:58 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'App\Controllers\Blog class not found'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\demoProject\public\index.php(54): Core\Router->dispatch('blog/shoiw')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\demoProject\Core\Router.php'	 on line 81
+--------------------------
