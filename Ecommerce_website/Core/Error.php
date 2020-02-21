@@ -48,7 +48,7 @@ class Error{
 				// else{
 				// 	echo "<h3>An Error occured</h3>";
 				// }
-				View::renderTemplate("Posts/$code.html");
+				View::renderTemplate("home/$code.html");
 
 				// View::renderTemplate('Posts/400.html');
 		

@@ -11,25 +11,34 @@ namespace App\Controllers;
 			// session_destroy();
 			// echo "<br><h3>In show login form from Login controller</h23>";
 			// View::renderTemplate('admin/login.html');
-			if (isset($_SESSION['username'])) {
-				// echo "fgfgfgfgfgfgtf<br>";
-				// echo $_SESSION['username'];
-				// View::renderTemplate('admin/dashboard.html');
-				header("location:http://localhost/cybercom/Ecommerce_website/public/admin/dashboard");
-				// $this->dashboard();
-			}
+			// if (isset($_SESSION['user'])) {
+			// 	// echo "fgfgfgfgfgfgtf<br>";
+			// 	// echo $_SESSION['username'];
+			// 	// View::renderTemplate('admin/dashboard.html');
+			// 	header("location:http://localhost/cybercom/Ecommerce_website/public/admin/dashboard");
+			// 	// $this->dashboard();
+			// }
+			// print_r($_POST);die;
 			if (isset($_POST['userLogin'])) {
-				print_r(extract($_POST));
-					// echo "chklogin Called";
+				extract($_POST);
+				// print_r($_POST);
+					echo "chklogin Called";
+				// session_destroy();
+					// unset($_SESSION['user']);
+					// echo $_SESSION['user'];
 					if ($email == 'admin123' && $password == '123') {
-						$_SESSION['username'] = $email;
+						$_SESSION['user'] = $email;
+						// echo "location:http://localhost/cybercom/Ecommerce_website/public/admin/dashboard";
+						
 						header("location:http://localhost/cybercom/Ecommerce_website/public/admin/dashboard");
 				
 						
 					}
 					else{
 						echo "Invalid login details";
-						$_SESSION['username'] = "";
+						throw new \Exception("Invalid login details");
+						
+						$_SESSION['user'] = "";
 						View::renderTemplate('admin/login.html');
 					}
 			}

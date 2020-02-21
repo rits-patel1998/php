@@ -65,21 +65,21 @@ class Router{
 					$postObj->$action();
 				}	
 				else{
-					echo "$action is not of $controller class";
-					// throw new \Exception("$action is not found in $controller class");
+					// echo "$action is not of $controller class";
+					throw new \Exception("$action is not found in $controller class");
 					
 				}				
 			}
 			else{
 
-				echo "$controller class not found";
-				// throw new \Exception("$controller class not found");
+				// echo "$controller class not found";
+				throw new \Exception("$controller class not found");
 					
 			}
 		}
 		else{
-			echo "No route matched";
-			// throw new \Exception("No route matched",404);
+			// echo "No route matched";
+			throw new \Exception("No route matched",404);
 				
 		}
 	}

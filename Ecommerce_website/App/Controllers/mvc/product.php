@@ -17,10 +17,12 @@ class product extends \Core\Controller{
   //     	print_r($products);
   //     	echo "</pre>";
       	$arrParent = $this->getCategories();
+      	// echo $_SESSION['user_id'];
+      	// die();
 		View::renderTemplate('product/showSingleProduct.html',[
 
 			'url_key' => $url_key,
-			
+			'userid' =>$_SESSION['user_id'],
 			'products' => $products,
 			'base_url' => $_SESSION['base_url'],
 			'arrParent' => $arrParent,

@@ -15,21 +15,25 @@ WHERE c.url_key = 'electronic'
 	// session_start();
 	// require_once '../v.php';
 require "../vendor/autoload.php";
+	error_reporting(E_ALL);
+	set_error_handler('Core\Error::errorHandler');
+	set_exception_handler('Core\Error::exceptionHandler');
 
-	spl_autoload_register(function ($className){
-		$rootDir = dirname(__DIR__);
-		$file = $rootDir ."/".str_replace('\\','/', $className).'.php';
-		if (is_readable($file)) {
-			require $rootDir.'/'.str_replace('\\', '/', $className).'.php';
-		}
-	});
+// session_start();
+	// spl_autoload_register(function ($className){
+	// 	$rootDir = dirname(__DIR__);
+	// 	$file = $rootDir ."/".str_replace('\\','/', $className).'.php';
+	// 	if (is_readable($file)) {
+	// 		require $rootDir.'/'.str_replace('\\', '/', $className).'.php';
+	// 	}
+	// });
 
 	$_SESSION['base_url'] = "http://localhost/cybercom/Ecommerce_website";
 
 	$router = new Core\Router();
 	// echo $_SERVER['QUERY_STRING'];
 	// $router->add('admin/{controller}');
-	$router->add('',['controller' => 'Admin','action' => 'login']);
+	// $router->add('',['controller' => 'Admin','action' => 'login']);
 	$router->add('admin/cms/{controller}', ['namespace'=>'admin\cms','action'=>'index']);
 	$router->add('admin/cms/{controller}/{action}',['namespace'=>'admin\cms']);
 	$router->add('admin/cms/{controller}/{action}/{id:\d+}',['namespace'=>'admin\cms']);

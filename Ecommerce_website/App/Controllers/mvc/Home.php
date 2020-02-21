@@ -4,6 +4,7 @@
 	use \Core\View;
 	use \Core\Model;
 	use PDO;
+	// session_start();
 
 
 	
@@ -11,7 +12,53 @@
 		// public function __
 
 		public function login(){
-			View::renderTemplate('Home/login.html');
+
+			if (isset($_POST['loginButton'])) {
+				extract($_POST);
+
+				$chkLogin = $this->chkLogin($email,$password);
+				if ($chkLogin == 1) {
+					echo "<script>alert('Login Successfull');</script>";
+					$this->index();
+				}
+				else
+				{
+					throw new \Exception(" Invalid UserName or Password ");
+				
+				}	
+
+				
+			}
+			else{
+				View::renderTemplate('Home/login.html');
+			}
+			
+		}
+
+		protected function chkLogin($email,$password){
+			$db = model::getDB();
+				// echo "6666666666666666";
+				
+			$selectUserData = "SELECT * from user where email = '$email' and password = $password";
+			
+			$stmt = $db->query($selectUserData);
+
+			$selectUserData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			//  echo"<pre>";
+			// print_r($selectUserData);
+			// echo"</pre>";
+			// die();
+			
+			if ($stmt->rowCount() == 1) {
+				$_SESSION['username'] = $selectUserData[0]['firstname'];
+ 				$_SESSION['email'] = $email;
+ 				$_SESSION['user_id'] = $selectUserData[0]['User_id'];
+ 				
+ 				return true;
+			}	
+			else{
+				return false;
+			}
 		}
 		public function index(){
 			$arrParent = $this->getCategories();
@@ -23,7 +70,8 @@
 
 				'arrParent' => $arrParent,
 				'base_url' => $_SESSION['base_url'],
-				'cmsPages' => $cmsPages
+				'cmsPages' => $cmsPages,
+				'username' =>  $_SESSION['username']
 			]);
 		}
 

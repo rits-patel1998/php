@@ -1,0 +1,45 @@
+[21-Feb-2020 06:03:29 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\Ecommerce_website\public\index.php(54): Core\Router->dispatch('admin/')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Router.php'	 on line 82
+--------------------------
+[21-Feb-2020 06:03:29 Asia/kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "Posts/404.html" (looked into: ../App/Views). in C:\xampp\htdocs\cybercom\Ecommerce_website\vendor\twig\twig\src\Loader\FilesystemLoader.php:227
+Stack trace:
+#0 C:\xampp\htdocs\cybercom\Ecommerce_website\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Posts/404.html')
+#1 C:\xampp\htdocs\cybercom\Ecommerce_website\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Posts/404.html')
+#2 C:\xampp\htdocs\cybercom\Ecommerce_website\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Posts/404.html')
+#3 C:\xampp\htdocs\cybercom\Ecommerce_website\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Posts/404.html')
+#4 C:\xampp\htdocs\cybercom\Ecommerce_website\Core\View.php(31): Twig\Environment->render('Posts/404.html', Array)
+#5 C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Error.php(51): Core\View::renderTemplate('Posts/404.html')
+# in C:\xampp\htdocs\cybercom\Ecommerce_website\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+[21-Feb-2020 06:06:32 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\Ecommerce_website\public\index.php(54): Core\Router->dispatch('admin/')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Router.php'	 on line 82
+--------------------------
+[21-Feb-2020 06:08:57 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\Ecommerce_website\public\index.php(54): Core\Router->dispatch('admin/')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Router.php'	 on line 82
+--------------------------
+[21-Feb-2020 06:08:57 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'No route matched'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\Ecommerce_website\public\index.php(54): Core\Router->dispatch('admin/')
+#1 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Router.php'	 on line 82
+--------------------------
+[21-Feb-2020 10:32:21 Asia/kolkata] Fatal Error<
+Uncaught Exception :'Exception
+Message : 'Method loAction not found in controllerApp\Controllers\Admin'
+Get Strace : '#0 C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Router.php(65): Core\Controller->__call('lo', Array)
+#1 C:\xampp\htdocs\cybercom\Ecommerce_website\public\index.php(54): Core\Router->dispatch('admin/Lo')
+#2 {main}'
+Thrown in :'C:\xampp\htdocs\cybercom\Ecommerce_website\Core\Controller.php'	 on line 24
+--------------------------

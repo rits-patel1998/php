@@ -19,7 +19,7 @@ class Category extends \Core\Controller{
 	protected function getCategoryCleanArray($categoryData,$filename){
         $categoryArr = array( 
             "category_name" => $categoryData['category_name'],
-            "url_key" => $categoryData['url_key'],
+            "url_key" => $this->generateUrlKey($categoryData['url_key']),
             "image" =>$filename,//$categoryData[''],
             "status" => $categoryData['status'],
             "description" => $categoryData['description'],
@@ -59,7 +59,8 @@ class Category extends \Core\Controller{
 		            if ( move_uploaded_file($tmp_name, $location .$filename)) {
 		            	 $filename = $filename;
 		                // echo "uploaded";
-						// die();		
+						// die();	
+
 						$this->getArray($_POST,$filename);                
 		            }
 		            else {
@@ -204,10 +205,12 @@ class Category extends \Core\Controller{
 			return $url_key;
 		}
 		else{
-			echo "<h3>Enter unique Url Key</h3>";
-			$selectcategory = "SELECT category_id,category_name from category where parent_category = 0";
-			$stmt = $db->query($selectcategory);
-			$categoryData = $stmt->fetchAll(PDO::FETCH_ASSOC);	
+			// echo "<h3>Enter unique Url Key</h3>";
+			throw new \Exception("Enter unique Url Key");
+			
+			// $selectcategory = "SELECT category_id,category_name from category where parent_category = 0";
+			// $stmt = $db->query($selectcategory);
+			// $categoryData = $stmt->fetchAll(PDO::FETCH_ASSOC);	
 			View::renderTemplate('catrgory/addCategory.html',[
 					'categoryData' => $categoryData
 			]);

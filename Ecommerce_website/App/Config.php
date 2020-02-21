@@ -8,7 +8,7 @@ class config{
 	const dbName = 'ecommerce_website';
 	const userName = 'root';
 	const password = '';
-	const SHOW_ERRORS = false;
+	const SHOW_ERRORS = true;
 }
 
 ?>
