@@ -12,12 +12,10 @@ class VehiclesService extends \Core\Controller{
 
     protected function getserviceCleanArray($data,$user_id){
 
-        echo $timeSlot = VehicleService::getSlot($data['timeSlot']);
+        echo $timeSlot = VehicleService::getSlot($data['timeSlot'],$data['date']);
         // die();
         if ($timeSlot == 0) {
            throw new \Exception("Slot Not available..Please select the different One");
-           
-
         }
         else{
            $slot = $timeSlot; 
@@ -101,9 +99,9 @@ class VehiclesService extends \Core\Controller{
     public function showService(){
         echo $user_id = $_SESSION['user_id'];
         $serviceData = VehicleService::getAll($user_id);
-        echo "<pre>";
-        print_r($serviceData);
-        echo "<pre>";
+        // echo "<pre>";
+        // print_r($serviceData);
+        // echo "<pre>";
         View::renderTemplate('vehicleService/showService.html',[
           'user_id' => $user_id,
           'serviceData' =>  $serviceData

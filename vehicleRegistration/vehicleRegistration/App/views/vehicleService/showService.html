@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block body %}
+  <h3>Show Services Page</h3>
+
+  
+
+
+  <table border="2">
+    <!-- <tr>
+      <th></th>
+    </tr> -->
+
+    <tr>
+      
+          <th></th>
+          <th>title</th>
+          <th>vehicle_no</th>
+          <th>value.user_licence_no</th>
+          <th>value.date</th>
+          <th>value.time_slot</th>
+          <th>value.vehicle_no</th>
+          <th>value.vehicle_issue</th>
+          <th>value.service_center</th>
+       
+      </tr>
+   
+    {% for service,value in serviceData %}
+      <tr>
+      
+          <td>{{value.title}}</td>
+          <td>{{value.vehicle_no}}</td>
+          <td>{{value.user_licence_no}}</td>
+          <td>{{value.date}}</td>
+          <td>{{value.time_slot}}</td>
+          <td>{{value.vehicle_no}}</td>
+          <td>{{value.vehicle_issue}}</td>
+          <td>{{value.service_center}}</td>
+      </tr>
+   
+    {% endfor %}
+
+  </table>
+
+{% endblock %}

@@ -30,11 +30,11 @@
 	// $postObj->index()
 	// // echo "name of class : ".get_class($router);
 
-	$router->add('',['controller' => 'Home','action' => 'index']);
+	// $router->add('',['controller' => 'Home','action' => 'index']);
 	// $router->add('admin/posts/abc',['controller' => 'Posts','action' => 'index']);
 	// $router->add('posts/new',['controller' => 'Posts','action' => 'new']);
 	$router->add('{controller}/{action}');
-	$router->add('{controller}/{id:\d+}/{action}');
+	$router->add('{controller}/{action}/{id:\d+}');
 	$router->add('admin/{controller}/{action}',['namespace'=>'Admin']);
 	$router->add('mvc/{controller}/{action}',['namespace'=>'mvc']);
 

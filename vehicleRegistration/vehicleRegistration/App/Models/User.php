@@ -53,37 +53,6 @@ class User extends \Core\Model{
     }
 
 	
-	public static function update($tablename,$arrUser,$where){
-    
-        echo "<pre>";
-            print_r($arrUser);
-        
-        echo "</pre>";
-        echo $tablename;
-        // die();
-        $updateUser = "update $tablename set ". $arrUser[0]." where $where";
-        echo $updateUser."<br>";
-            // die();
-        $db = static::getDB();
-    	if ($stmt = $db->exec($updateUser)) {
-        	return $stmt;
-        }
-        else{
-        	return false;
-        }
-	}
-
-
-	public static function delete($tablename , $where){
-		$deletRow = "DELETE FROM $tablename WHERE $where";
-		$db = static::getDB();
-		if ($stmt = $db->exec($deletRow)) {
-        	return $stmt;
-        }
-        else{
-        	return false;
-        }
-	}
 }
 
 ?>
